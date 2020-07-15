@@ -1,0 +1,228 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Work Page</title>
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rosario:400,400i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {
+  /* Location of the image */
+  background-image: url(http://jarellalvarez.com/img/homeBG_jarell_alvarez_bcit_d3.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#0091EA;
+
+}
+
+#capt{
+  font-family: 'Rosario', sans-serif;
+  color: #0091EA;
+  font-size: 20px;
+  line-height: 25px;
+}
+text{
+    font-family: 'Rosario', sans-serif;
+    color: #0091EA;
+    font-size: 25px;
+    line-height: 25px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: inherit;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Rosario', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 15px;
+}
+
+li {
+    float: right;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #4FBBDA;
+}
+
+.active {
+    background-color: #1873BA;
+}
+
+h2{
+  font-family: 'Rosario', sans-serif;
+  color: #15246E;
+  text-align: center;
+  text-shadow: 2px 2px 2px #333;
+  margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 55px;
+    font-style: bold;
+    font-weight: lighter;
+    line-height: 15px;
+    text-transform: none;
+    text-transform: uppercase;
+}
+
+.media {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.media__image { display: block; }
+
+.media__body {
+  background: rgba(41, 128, 185, 0.7);
+  bottom: 0;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 2.75em 2em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.media__body:hover { opacity: 1; }
+
+.media__body:after,
+.media__body:before {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  bottom: 1em;
+  content: '';
+  left: 1em;
+  opacity: 0;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.6s 0.2s;
+  transition: 0.6s 0.2s;
+}
+
+.media__body:before {
+  border-bottom: none;
+  border-top: none;
+  left: 2em;
+  right: 2em;
+}
+
+.media__body:after {
+  border-left: none;
+  border-right: none;
+  bottom: 2em;
+  top: 2em;
+}
+
+.media__body:hover:after,
+.media__body:hover:before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.media__body h2 { margin-top: 0; }
+
+.media__body p { margin-bottom: 1.5em; }
+}
+</style>
+<script>
+$(window).scroll(function(){
+	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+</script>
+
+<body>
+  <div id="navbar ">
+    <ul>&nbsp &nbsp &nbsp
+      <a href="ayeshariyaz.html">
+        <image src="https://cdn-images-1.medium.com/max/800/1*tgAu8qr19jZcgow9eOpLBQ.png" style="height:55px;align=left;background-color:inherit;"> </a>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a class="active" href="ayeshariyaz.html">Home</a></li>
+</ul>
+  </div>
+
+<center><table style="width:50%" ></center>
+<h2> Featured Work </h2>
+
+<br/>
+<strong><p id="capt">A showcase of some of my work I did for university assignemnts.<br/>All of the pens directed to my <a target="_blank" href="https://codepen.io/ayeshariyaz/">CodePen</a> page.<strong> </p>
+<tr>
+ <td bgcolor="white" height="100" width="190">
+ <center>  <div class="media"><a target="_blank" href="https://codepen.io/ayeshariyaz/full/qopYYa/"><img alt="" class="media__image" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1867775.qopYYa.small.dfa31d84-ef06-435d-9f80-a4b99eda3d96.png" />
+   <div class="media__body">
+   <p>Simple Swap Buttons<p>
+   </div></a></center>
+ </td>
+
+ <td bgcolor="white" height="290" width="100">
+ <center><div class="media"><a target="_blank" href="https://codepen.io/ayeshariyaz/full/aGNGzY/"><img alt="" class="media__image" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1867775.aGNGzY.small.9385cc56-ac46-4117-9a68-6ffff2f5dd15.png" />
+ <div class="media__body">
+ <p>Multiplication tables from 1 to 9<p>
+ </div></a>
+ </div></center>
+ </td>
+
+ <td bgcolor="white" height="290" width="100" fill="white">
+ <center><div class="media"><a target="_blank" href="https://codepen.io/ayeshariyaz/full/deveJv/"><img alt="" class="media__image" src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1867775.deveJv.small.2ede00d8-e5b0-48eb-8973-c05804d0eb1b.png" />
+ <div class="media__body">
+ <p>Number Game<p>
+ </div></a>
+ </div></center>
+ </td>
+</tr>
+</table>
+<br/><hr width="87%"/>
+      <section>
+        <image src="https://www.compareorlando.co.uk/wp-content/uploads/2017/07/holiday-planning.jpg" style="weight:345px; height:200px;"><br/><br/>
+         <text><a target="_blank" href="demo.html">Places I have been to...</a></text><br/><br/><br/><br/>
+         <image src="http://www.embiggenbooks.com/wp-content/uploads/2016/03/bookclub.jpg" style="weight:345px; height:300px"><br/><br/>
+         <text><a target="_blank" href="books.html">I am currently reading...</a></text><br/><br/><br/><br/>
+         <image src="http://ochrchick.com/wp-content/uploads/2016/01/Resume_Placeholder.jpg" style="weight:345px; height:300px"><br/><br/>
+         <text><a target="_blank" href="cv.xml">Check out my Resume</a></text>
+      </section>
+
+</body>
+</html>
