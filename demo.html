@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+<meta charset="utf-8"/>
+<title> Travel Page</title>
+</head>
+<style>
+body {
+  /* Location of the image */
+  background-image: url(http://jarellalvarez.com/img/homeBG_jarell_alvarez_bcit_d3.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#0091EA;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: inherit;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Rosario', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 15px;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #4FBBDA;
+}
+.active {
+    background-color: #1873BA;
+}
+p{
+  font-family: 'Playfair', sans-serif;
+  color: #0091EA;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 15px;
+}
+* { color:#0091EA; text-decoration: none;}
+.mapped {
+  border-style: solid;
+    border-color: coral;
+       }
+       input[type=text], textarea {
+           width: 100%;
+           padding: 12px 20px;
+           margin: 8px 0;
+           box-sizing: border-box;
+       }
+</style>
+<script>
+var db = null;
+
+try{
+  db = openDatabase('CommentDB', '1.0', 'Comment DB', 2 * 1024 * 1024);
+}catch(ignore){
+  console.error("local DB is not supported");
+}
+function createLocalDB(){
+  if(db != null){
+    db.transaction(
+      function (transaction) {
+        transaction.executeSql(
+          'CREATE TABLE IF NOT EXISTS comments(name TEXT NOT NULL,comment TEXT NOT NULL);',[],
+          function dataHandler(transaction, results){},
+                    function errorHandler(transaction, error){
+                      console.error("Error creating table: " + error.code + ": " + error.message);
+                    }
+                  );
+                }
+              );
+            }
+          }
+          function addRecord(){
+
+          var email=document.getElementById("name").value;
+          var comment=document.getElementById("comment").value;
+          if(email==null || comment==null ){
+            alert("Complete All Fields");
+          }
+          else{
+          document.getElementById("name").value="";
+          document.getElementById("comment").value="";
+          alert("Comment added!");
+
+          if(db != null){
+              db.transaction(
+                function (transaction) {
+                  transaction.executeSql(
+                    'INSERT INTO comments (name,comment) VALUES (?, ?);',
+                    [name,comment],
+                    function dataHandler(transaction, results){},
+                    function errorHandler(transaction, error){
+                      console.error("Error inserting into table: " + error.code + ": " + error.message);
+                    }
+                  );
+                }
+              );
+            }
+          }
+          }
+
+
+  function getHistory(){
+
+  if(db != null){
+      db.transaction(
+        function (transaction) {
+          transaction.executeSql(
+            'select * from comments;',
+            [],
+            processResult,
+            function errorHandler(transaction, error){
+              console.error("Error reading records: " + error.code + ": " + error.message);
+            }
+          );
+        }
+      );
+    }
+  }
+
+  function processResult(transaction, results){
+    displayResult(results);
+  }
+
+
+  function displayResult(results){
+    var html = "<table border='0' class='commentTable' >";
+     html+="<tr><th>Name</th><th>Comment</th></tr>"
+    for (var i=0; i<results.rows.length; i++) {
+      var row = results.rows.item(i);
+  html += "<td>"+"<b>"+row.name + "</b>"+"</td>" + "<td>"+ row.comment  + "</tr>";
+    }
+    html+="</table>";
+    document.getElementById("historyDiv").innerHTML = html;
+  }
+
+
+</script>
+<body onload="createLocalDB()">
+
+  <div id="navbar ">
+  <ul>&nbsp &nbsp &nbsp
+    <a href="ayeshariyaz.html">
+      <image src="https://cdn-images-1.medium.com/max/800/1*tgAu8qr19jZcgow9eOpLBQ.png" style="height:55px;align=left;background-color:inherit;"> </a>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="work.html">Work</a></li>
+  <li><a class="active" href="ayeshariyaz.html">Home</a></li>
+  </ul>
+  </div>
+<center>
+  <div>
+    <image src="https://booksfeelsandtears.files.wordpress.com/2015/05/tumblr_static_wander.gif" style="height:145px;">
+  </div>
+  <p>Click on the circles below to read about that place </p>
+<img src="earth.jpg" alt="worldmap" class="mapped" usemap="#worldmap"/ >
+
+<map name="worldmap">
+  <area target="_blank" shape="circle" coords="795,326,7" href="https://en.wikipedia.org/wiki/Kolkata" alt="Kolkata">
+  <area target="_blank" shape="circle" coords="692,321,7" href="https://en.wikipedia.org/wiki/Dubai" alt="Dubai">
+  <area target="_blank" shape="circle" coords="703,332,7" href="https://en.wikipedia.org/wiki/Khasab" alt="Khasab">
+  <area target="_blank" shape="circle" coords="681,329,7" href="https://en.wikipedia.org/wiki/Mecca" alt="Mecca">
+</map>
+</center>
+  <p style="text-align:left;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Have you been to any of these places I have been to?</p>
+  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+  <input type="radio" name="places" value="Yes" checked>
+  <label>Yes</label><br/>
+  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+  <input type="radio" name="places" value="No">
+  <label >No</label><br/>
+  <br/>
+  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+  <input type="submit" value="Submit"><br/><br/>
+  <p style="text-align:left;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Do you love travelling too? Have some stories to share? Share your stories below</p>
+
+  <form  style="margin: 0 auto; width:1050px;">
+  <input type="text" size="45" name="Name" placeholder="Name" id="name"><br/><br/>
+  <textarea size="69" rows="5" cols="63" placeholder="Enter your message" id="comment"></textarea>
+   <button onclick="addRecord()"> Add your story </button>
+  </form>
+<br/> <br/> <br/>
+<div id="historyDiv" >  </div>
+</div>
+
+</body>
+</html>

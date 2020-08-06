@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xsl-stylesheet type="text/xsl" href="cv.xsl"?>
+
+<cv>
+<candidate>
+
+<objective>Looking for internships</objective>
+<skills>HTML5, CSS, JS, C++</skills>
+<portfolio>Qwerty</portfolio>
+<experience>volunteered for Ing creative festival Dubai 2017</experience>
+<contactInfo>www.linkedin/ayeshariyaz</contactInfo>
+<PersonalInfo>Indian</PersonalInfo>
+<ExtraCurricular>Executive Club member of Check You Out Club</ExtraCurricular>
+</candidate>

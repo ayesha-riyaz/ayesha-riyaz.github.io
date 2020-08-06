@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Page</title>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rosario:400,400i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {
+	  background:#2d3b36 url(http://jarellalvarez.com/img/homeBG_jarell_alvarez_bcit_d3.jpg)no-repeat center center fixed;
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top:0px;
+}
+h1{
+  font-family: 'Rosario', sans-serif;
+  color: #15246E;
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 35px;
+  line-height: 15px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: inherit;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Rosario', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 15px;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #4FBBDA;
+}
+
+.active {
+    background-color: #1873BA;
+}
+form {
+    margin-left:auto;
+    margin-right:auto;
+    width: 343px;
+    height: 333px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+textarea{
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+    width: 276px;
+    height: 110px;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display:block;
+    font-family: 'Rosario', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+input {
+    width: 276px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.4);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display:block;
+    font-family: 'Rosario', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+}
+
+input[type=submit] {
+    cursor:pointer;
+}
+
+input.name {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px;
+	  padding-left:45px;
+}
+
+input.email {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+	  padding-left:45px;
+}
+
+input.message {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+	  padding-left:45px;
+}
+
+::-webkit-input-placeholder {
+	  color: #fff;
+}
+
+:-moz-placeholder{
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+	  color: #fff;
+}
+
+input:focus, textarea:focus {
+	  background-color: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  overflow: hidden;
+}
+
+.btn {
+	  width: 138px;
+	  height: 44px;
+	  -moz-border-radius: 4px;
+	  -webkit-border-radius: 4px;
+	  border-radius: 4px;
+	  float:right;
+    border: 1px solid #253737;
+    background: #1873ba;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4fbbda), to(#1873ba));
+    background: -webkit-linear-gradient(top, #4fbbda, #1873ba);
+    background: -moz-linear-gradient(top, #4fbbda, #1873ba);
+    background: -ms-linear-gradient(top, #4fbbda, #1873ba);
+    background: -o-linear-gradient(top, #4fbbda, #1873ba);
+    background-image: -ms-linear-gradient(top, #4fbbda 0%, #1873ba 100%);
+    padding: 10.5px 21px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    text-shadow: #333333 0 1px 0;
+    color: #e1e1e1;
+}
+
+.btn:hover {
+    border: 1px solid #253737;
+    text-shadow: #333333 0 1px 0;
+    background: #1873ba;
+    background: -webkit-gradient(linear, left top, left bottom, from(#77b2b0), to(#1873ba));
+    background: -webkit-linear-gradient(top, #77b2b0, #1873ba);
+    background: -moz-linear-gradient(top, #77b2b0, #1873ba);
+    background: -ms-linear-gradient(top, #77b2b0, #1873ba);
+    background: -o-linear-gradient(top, #77b2b0, #1873ba);
+    background-image: -ms-linear-gradient(top, #77b2b0 0%, #1873ba 100%);
+    color: #fff;
+ }
+
+.btn:active {
+    margin-top:1px;
+    text-shadow: #333333 0 -1px 0;
+    border: 1px solid #253737;
+    background: #4fbbda;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1873ba), to(#1873ba));
+    background: -webkit-linear-gradient(top, #1873ba, #609391);
+    background: -moz-linear-gradient(top, #1873ba, #4fbbda);
+    background: -ms-linear-gradient(top, #1873ba, #4fbbda);
+    background: -o-linear-gradient(top, #1873ba, #4fbbda);
+    background-image: -ms-linear-gradient(top, #1873ba 0%, #4fbbda 100%);
+    color: #fff;
+    -webkit-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+   }
+
+</style>
+<script>
+function validateEmail()
+      {
+         var emailID = document.form.EMail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+
+         if (atpos < 1 || ( dotpos - atpos < 2 ))
+         {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         return( true );
+      }
+</script>
+<body>
+<div id="navbar ">
+  <ul>&nbsp &nbsp &nbsp
+    <a href="ayeshariyaz.html">
+      <image src="https://cdn-images-1.medium.com/max/800/1*tgAu8qr19jZcgow9eOpLBQ.png" style="height:55px;align=left;background-color:inherit;"> </a>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="work.html">Work</a></li>
+  <li><a class="active" href="ayeshariyaz.html">Home</a></li>
+  </ul>
+  </div>
+  <h1>Have a speaking engagement you'd like to discuss?<br/><br/><br/> Just want to say hi or have coffee? &nbsp Let's chat, I'll pay for the first coffee.</h1>
+<form>
+		<input name="name" placeholder="Name *" class="name" required />
+		<input name="emailaddress" placeholder="Email Id *" class="email" type="email" required />
+    <textarea rows="4" cols="50" name="subject" placeholder="Enter your message(optional)" class="message"></textarea>
+    <input name="submit" onclick="validateEmail()" class="btn" type="submit" value="Send" />
+</form>
+</body>
+</body>
+</html>

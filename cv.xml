@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="cv.xsl"?>
+<!DOCTYPE cv [
+ <!ELEMENT info (firstname, lastname)>
+ <!ELEMENT firstname (#PCDATA)>
+ <!ELEMENT lastname (#PCDATA)>
+ <!ELEMENT contact (email, phone, website,website1, address)>
+ <!ELEMENT email (#PCDATA)>
+ <!ELEMENT phone (#PCDATA)>
+ <!ELEMENT website (#PCDATA)>
+ <!ELEMENT address (#PCDATA)>
+ <!ELEMENT about-me (#PCDATA)>
+ <!ELEMENT experience (job)>
+ <!ELEMENT job (title, position, year, description)>
+ <!ELEMENT title (#PCDATA)>
+ <!ELEMENT position (#PCDATA)>
+ <!ELEMENT year (#PCDATA)>
+ <!ELEMENT description (#PCDATA)>
+ <!ELEMENT education (course)>
+ <!ELEMENT course (institute, course, year, description)>
+ <!ELEMENT institute (#PCDATA)>
+ <!ELEMENT course (#PCDATA)>
+ <!ELEMENT year (#PCDATA)>
+ <!ELEMENT description (#PCDATA)>
+ <!ELEMENT skills (one, two, three)>
+ <!ELEMENT one (#PCDATA)>
+ <!ELEMENT two (#PCDATA)>
+ <!ELEMENT three (#PCDATA)>
+]>
+<cv>
+  <info>
+    <firstname> AYESHA </firstname>
+    <lastname> RIYAZ </lastname>
+  </info>
+  <contact>
+    <email> ayesha.riyaz98@gmail.com </email>
+    <phone> +97156476090 </phone>
+    <website> http://www.linkedin.com/ayeshariyaz </website>
+    <website1> https://medium.com/@ayesha.riyaz98 </website1>
+    <address> Dubai, UAE </address>
+  </contact>
+  <about-me> Sophomore Computer Science student with
+good academic record with keen interest in
+web development.
+ </about-me>
+  <experience>
+    <job>
+<position> Volunteer </position>      
+<title>  STEAM Workshop </title>
+      <year> 2017 </year>
+      <description> Assisted middle school students creating apps.
+Helped at the registration desk  </description>
+    </job>
+        <job>
+<position> Volunteer </position>      
+<title>   ING Creative Festival </title>
+      <year> 2017 </year>
+      <description> Liaised with the registration team and the VIP
+corner, ensuring the names of the visitors and
+the speakers on the computer. Assisted the
+leadership team in curating items for the
+specific workshops. </description>
+    </job>
+      <job>
+<position> Volunteer </position>      
+<title> |Al-Marmoom Equine
+Therapy </title>
+      <year> 2017 </year>
+      <description> Assisted Special Needs Children for a day  </description>
+    </job>
+        <job>
+<position> Usher </position>      
+<title>   Rush A Way </title>
+      <year> 2017 </year>
+      <description>Ushered for a game event hosted for reputed
+corporates. Managed and ensured the run of
+a fair play with no cheating involved.</description>
+    </job>
+<job>
+<position> Usher </position>      
+<title>   Graduation Ceremony </title>
+      <year> 2016 </year>
+      <description>Manning
+entrances, ensuring comfort of all guests.
+Maintaining order during the ceremony.
+</description>
+    </job>
+  </experience>
+  <education>
+    <course>
+      <institutename> University of Wollongong in Dubai </institutename>
+      <coursename> Bachelor of Computer Science </coursename>
+      <year> 2016-2020 </year>
+    </course>
+    <course>
+      <institutename> Our Own English High School, Dubai </institutename>
+       <year> 2016 </year>
+    </course>
+  </education>
+
+  <languages>
+    <one> English </one>
+    <two> Hindi </two>
+    <three> Bengali </three>
+  </languages>
+  <skills>
+    <one>HTML</one>
+    <two>CSS</two>
+    <three>JAVASCRIPT</three>
+  </skills>
+
+</cv>
